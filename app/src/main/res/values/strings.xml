@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Appet</string>
+    <string name="txt">Los mejores lugares para llevar a tu mascota</string>
+    <string name="correoInicioSesion">Ingrese su correo</string>
+    <string name="contraseñaInicioSesion">Ingrese su contraseña</string>
+    <string name="botonInicioSesion">Iniciar</string>
+    <string name="botonRegistrateAqui">¿No tienes una cuenta? Registrate aquí</string>
+    <string name="botonRegistrarse">Registrar</string>
+    <string name="nombreRegistro">Nombre o nickname</string>
+    <string name="correoRegistro">Correo electronico</string>
+    <string name="contraseñaRegistro">Contraseña</string>
+    <string name="contraseñaRegistro2">Repite la contraseña</string>
+    <string name="txtRContraseña">Ingrese nuevamente la contraseña</string>
+    <string name="title_activity_inicio_sesion">Iniciar sesión</string>
+    <string name="title_activity_PantallaRegistro">Bienvenido a Appet</string>
+</resources>
