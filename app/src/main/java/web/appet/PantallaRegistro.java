@@ -48,7 +48,12 @@ public class PantallaRegistro extends AppCompatActivity {
 
         else if(contraseña.equals(contraseña2) && (correo.length()!=0)){
             Toast.makeText(this, "Se ha registrado", Toast.LENGTH_LONG).show();
-            Intent i = new Intent(this, Menu.class);startActivity(i);finish();}
+            Intent i = new Intent(this, Menu.class);startActivity(i);finish();
+
+
+
+
+        }
 
 
 

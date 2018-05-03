@@ -13,4 +13,5 @@
     <string name="txtRContraseña">Ingrese nuevamente la contraseña</string>
     <string name="title_activity_inicio_sesion">Iniciar sesión</string>
     <string name="title_activity_PantallaRegistro">Bienvenido a Appet</string>
+    <string name="checkBoxInicioSesion">Mantenme conectado</string>
 </resources>
