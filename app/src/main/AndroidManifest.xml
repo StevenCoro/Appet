@@ -16,8 +16,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".InicioSesion" />
-        <activity android:name=".PantallaRegistro" />
+        <activity android:name=".InicioSesion"
+                  android:label="Iniciar Sesión"
+            />
+
+        <activity android:name=".PantallaRegistro"
+                  android:label="Te damos la bienvenida a Appet"
+            />
+
         <activity android:name=".Menu"></activity>
     </application>
 

@@ -30,7 +30,7 @@ public class PantallaRegistro extends AppCompatActivity {
         String contraseña2 = etContraseña2.getText().toString();
 
         if (correo.length()==0){
-            Toast.makeText(this, "Debes ingresar un correo", Toast.LENGTH_LONG);
+            Toast.makeText(this, "Debes ingresar un correo", Toast.LENGTH_LONG).show();
         }
 
         if (nombre.length() == 0) {
@@ -39,17 +39,20 @@ public class PantallaRegistro extends AppCompatActivity {
         if (contraseña.length() == 0) {
             Toast.makeText(this, "Ingresa una contraseña", Toast.LENGTH_LONG).show();
         }
-        if (contraseña2.length()==0){Toast.makeText(this, "Confirma tu contraseña", Toast.LENGTH_LONG);}
-        if (nombre.length() != 0 && contraseña.length() != 0) {
-            if(contraseña.equals(contraseña2)){
-                Toast.makeText(this, "Se ha registrado", Toast.LENGTH_LONG).show();
-                Intent i = new Intent(this, Menu.class);startActivity(i);finish();}
-            else if (contraseña!=contraseña2){
-                Toast.makeText(this, "Las contraseñas deben coincidir", Toast.LENGTH_LONG);}
-
-
-
-
+        if (contraseña2.length()==0) {
+            Toast.makeText(this, "Confirma tu contraseña", Toast.LENGTH_LONG).show();
+            if (contraseña!=contraseña2&&contraseña2.length()!=0) {
+                Toast.makeText(this, "Las contraseñas deben coincidir", Toast.LENGTH_LONG).show();
+            }
         }
+
+        else if(contraseña.equals(contraseña2) && (correo.length()!=0)){
+            Toast.makeText(this, "Se ha registrado", Toast.LENGTH_LONG).show();
+            Intent i = new Intent(this, Menu.class);startActivity(i);finish();}
+
+
+
+
+
     }
 }
