@@ -2,19 +2,41 @@ package web.appet;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.Toast;
+
+
 public class InicioSesion extends AppCompatActivity {
-    private EditText etCorreoInicioSesion, etContraseñaInicioSesion;
+    public EditText etCorreoInicioSesion, etContraseñaInicioSesion;
     private CheckBox checkBoxInicioSesion;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_inicio_sesion);
 
+
+        AdminSQLiteOpenHelper admin = new AdminSQLiteOpenHelper(this, "registroUsuarios", null, 1);
+        SQLiteDatabase BaseDeDatos = admin.getWritableDatabase();
+
+        Cursor fila = BaseDeDatos.rawQuery("select correo, nombre, contraseña from registroUsuarios", null);
+
+        if(fila.moveToFirst()){
+            etCorreoInicioSesion.setText(fila.getString(0));
+            etContraseñaInicioSesion.setText(fila.getString(2));
+            BaseDeDatos.close();
+
+        }else{
+            Toast.makeText(this, "Debes registrarte", Toast.LENGTH_SHORT);
+            BaseDeDatos.close();
+        }
+
+
+        setContentView(R.layout.activity_inicio_sesion);
         etCorreoInicioSesion = (EditText) findViewById(R.id.etCorreoInicioSesion);
         etContraseñaInicioSesion = (EditText) findViewById(R.id.etContraseñaInicioSesion);
         checkBoxInicioSesion = (CheckBox) findViewById(R.id.checkBoxInicioSesion);

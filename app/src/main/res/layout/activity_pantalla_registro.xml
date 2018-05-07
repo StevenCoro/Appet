@@ -109,24 +109,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/contraseñaRegistro2" />
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="149dp"
-        android:layout_height="26dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:onClick="TerminosCondiciones"
-        android:textAllCaps="false"
-        android:textColor="@android:color/transparent"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toTopOf="@+id/botonRegistrar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.35"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/contraseñaRegistro2"
-        app:layout_constraintVertical_bias="0.318" />
-
 
 </android.support.constraint.ConstraintLayout>
