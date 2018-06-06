@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Toast;
+import android.support.v7.widget.Toolbar;
 
 
 public class InicioSesion extends AppCompatActivity {
@@ -18,6 +19,7 @@ public class InicioSesion extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
 
 
         AdminSQLiteOpenHelper admin = new AdminSQLiteOpenHelper(this, "registroUsuarios", null, 1);
